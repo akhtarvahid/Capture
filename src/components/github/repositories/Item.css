@@ -1,0 +1,28 @@
+
+  .card {
+    background-color: #fff;
+    margin: 5px;
+    width: 332px;
+    text-align: center;
+  }
+  .card-title{
+    margin: 20px 0px;
+  }
+  .star-fork-issue{
+    display: none;
+  }
+.desc-date{
+  margin: 8px 0px;
+  font-size: 14px;
+}
+.viewprofile{
+  padding: 12px;
+  text-decoration: none;
+  width: 100%;
+}
+.viewprofile:hover{
+  background-color: darkcyan;
+  color: #fff;
+  text-decoration: none;
+}
+  

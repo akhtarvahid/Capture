@@ -1,0 +1,59 @@
+body{
+ background-color: #f8f9fa;   
+}
+.search-section{
+    border-bottom: 1px solid #f57f22;
+    padding: 78px;
+    background: #51a3b9;
+}
+.recent-search{
+   color: #fff;  
+}
+.cards-root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 30px 0px;
+}
+.loadmore{
+    border: none;
+    font-size: 21px;
+    margin-bottom: 30px;
+    background: #ff7f50e8;
+    color: white;
+    padding: 4px 16px;
+    cursor: pointer;  
+    border-radius: 50px;
+}
+.loadmore-root{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* loader */
+.loader {
+    position: absolute;
+    border: 10px solid #ff7f5096;
+    border-radius: 50%;
+    border-top: 10px solid #17a2b87a;
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    left:47%;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @media screen and (max-width:600px){
+    .btn{margin-top: 10px;}  
+  }
