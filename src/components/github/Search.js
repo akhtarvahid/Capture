@@ -13,21 +13,21 @@ const styles = () => ({
   },
 });
 var list = JSON.parse(localStorage.getItem('searched'))
-const Search = ({handleChange, 
+const Search = ({handleChange,
     handleSearch, value, classes}) => {
-     
+
     return (
       <div className="search-section">
       <Grid container spacing={24}>
        <Grid item xs={12} sm={6}>
-       <TextField 
+       <TextField
         type="text"
         fullWidth
         placeholder="Search"
         onChange={handleChange}
         value={value}
         />
-        <Button variant="outlined" 
+        <Button variant="outlined"
         className={classes.button}
         onClick={handleSearch}>
          Search
@@ -36,9 +36,9 @@ const Search = ({handleChange,
        <Grid item xs={12} sm={6}>
         <div className="recent-search">
           <h3>Recent Search</h3>
-          <ul>{list.slice(0,3).map((item,i)=>
+          <ul>{list?list.slice(0,3).map((item,i)=>
             <li key={i.toString()}>{item}</li>
-          )}
+          ):''}
           </ul>
         </div>
        </Grid>

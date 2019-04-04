@@ -13,7 +13,9 @@ class App extends Component {
       status: false
     }
     componentDidMount(){
-      this.props.searchRepo(localStorage.getItem('search'))
+      const val = localStorage.getItem('search');
+      if(val.length!==0)
+      this.props.searchRepo(val)
     }
     handleSearch=()=>{
       const {search} = this.state;
@@ -38,12 +40,12 @@ class App extends Component {
         if(this.state.status && repo_list.length<1){
           renderCards = <Loader />
         }else{
-          renderCards = 
-          <div> 
+          renderCards =
+          <div>
           <AllItem repos={repo_list.slice(0, this.state.visible)}/>
-          <div className="loadmore-root"> 
+          <div className="loadmore-root">
           {repo_list.length>this.state.visible?
-          <button 
+          <button
            className="loadmore"
            onClick={this.handleMore}>
            Show More
@@ -51,15 +53,15 @@ class App extends Component {
          </div>
          </div>
         }
-        
+
         return (
          <div className="root">
-         <Search 
+         <Search
            handleChange={this.onChange}
            value={this.state.search}
            handleSearch={this.handleSearch}/>
           {renderCards}
-         </div>   
+         </div>
         );
     }
 }
